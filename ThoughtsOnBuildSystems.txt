@@ -1,0 +1,17 @@
+Thoughts on Build Systems
+
+Jacob Lo : jacoblo@jacoblo.net
+
+My current work use Jenkin CI a lot, but we do not have web applications.
+So I don't have experiences on continuous build integration for web applications.
+
+I do have some thoughts about it.
+
+
+1) Production code should be obfuscate. This will increase security as it is much harder for hacker to decode. In C++ development, application is compiled and compiled application cannot be written with text editor.
+
+2) Javascript library should be minify, only the code that needed should be created in production. This lower the size of the file, for better network performance.
+
+3) CI should run automation tests. Although web page is front-end, that regression testing is more valuable, one of the best thing automation test can be done is performance testing. We need to make a web page as responsive as it can be, and using automation IDE, such as Selenium, we can test if a particular build has some slow down on performance. My current work have particular server that run performance tests on our C++ application.
+
+ 
